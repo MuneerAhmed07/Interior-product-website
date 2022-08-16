@@ -1,0 +1,947 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    border: none;
+    transition: all .2s linear;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --main-color: #ee1c47;
+    --black: #404656;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+/* -------------------------------------------- header section starts ---------------------------  */
+
+.header{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 9%;
+}
+
+.header .logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .logo img{
+    max-width: 120px;
+    margin-right: 1.5rem;
+    cursor: pointer;
+}
+
+.header .logo .navbar a{
+    margin: 0 .5rem;
+    padding: .5rem 1rem;
+    font-size: 1.6rem;
+    font-weight: normal;
+    color: var(--black);
+}
+
+.header .logo .navbar a:hover{
+    color: var(--main-color);
+}
+
+.header .icons a{
+    font-size: 2rem;
+    color: var(--black);
+    margin: 0 .5rem;
+    padding: .5rem 1rem;
+}
+
+.header .icons #menuBtn{
+    font-size: 2.5rem;
+    border: .1rem solid #eee;
+    display: none;
+}
+
+.header .icons a:hover{
+    color: var(--main-color);
+}
+
+.header.active{
+    padding: 2rem 9%;
+    background: #fff;
+    border-bottom: .1rem solid #eee;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    z-index: 1000;
+}
+
+
+/* Login form starts  */
+
+.header .user-box{
+    position: absolute;
+    top: 100%;
+    right: -120%;
+}
+
+.header .user-box form{
+    background: #fff;
+    padding: 3rem 2rem;
+    border-radius: .5rem;
+    border: .1rem solid rgba(0,0,0,.1);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    width: 40rem;
+}
+
+.header .user-box form h1{
+    font-size: 2rem;
+    color: var(--black);
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+}
+
+.header .user-box form .input{
+    display: block;
+    border: .1rem solid rgba(0,0,0,.1);
+    border-radius: .5rem;
+    padding: 1.5rem 2rem;
+    margin: 1rem 0;
+    width: 100%;
+    text-transform: lowercase;
+    color: var(--black);
+}
+
+.header .user-box form .input::placeholder{
+    text-transform: lowercase;
+    color: var(--black);
+}
+
+.header .user-box form div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 0;
+}
+
+.header .user-box form div .box .check-box{
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-right: 1rem;
+}
+
+.header .user-box form div .box span{
+    font-size: 1.3rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.header .user-box form div a{
+    font-size: 1.3rem;
+    color: var(--black);
+}
+
+.header .user-box form button{
+    background: #222;
+    width: 100%;
+    padding: 1.5rem 3rem;
+    color: #fff;
+    font-synthesis: 2rem;
+    margin: 2rem 0;
+    letter-spacing: .1rem;
+    cursor: pointer;
+}
+
+.header .user-box form p{
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--black);
+}
+
+.header .user-box form p a{
+    margin-left: .5rem;
+    font-size: 1.3rem;
+    color: #5f5f95;
+}
+
+.header .user-box.active{
+    right: 0;
+    transition: .5s linear;
+}
+
+/* Login form ends  */
+
+/* search box starts  */
+
+.header .search-box{
+    position: absolute;
+    top: 100%;
+    right: -120%;
+    background: #fff;
+    width: 35rem;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+.header .search-box h1{
+    background: #fafafa;
+    border-top: .1rem solid rgba(0,0,0,.5);
+    color: var(--black);
+    padding: 1.5rem 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.header .search-box .inputBox{
+    padding: 2rem;
+}
+
+.header .search-box .inputBox input{
+    width: 100%;
+    border: .1rem solid rgba(0,0,0,.1);
+    padding: 1.3rem;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.header .search-box .inputBox select{
+    width: 100%;
+    border: .1rem solid rgba(0,0,0,.1);
+    padding: 1.3rem;
+    font-size: 1.5rem;
+}
+
+.header .search-box .inputBox button{
+    background: #000;
+    width: 100%;
+    padding: 1.5rem 3rem;
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    cursor: pointer;
+    margin-bottom: .5rem;
+    opacity: .9;
+}
+
+.header .search-box .inputBox button:hover{
+    opacity: 1;
+}
+
+.header .search-box .category h2{
+    text-align: center;
+    border: .1rem solid rgba(0,0,0,.1);
+    padding: 1.5rem 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.header .search-box .category .image-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 3rem 2rem;
+}
+
+.header .search-box .category .image-box .image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7rem;
+    height: 7rem;
+    background: #fafafa;
+    padding: .5rem;
+    margin: .3rem 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.header .search-box .category .image-box .image img{
+    width: 4rem;
+    height: 4rem;
+    overflow: hidden;
+}
+
+.header .search-box .category .image-box .image:hover{
+    transform: scale(1.1);
+    border: .1rem solid var(--main-color);
+}
+
+.header .search-box.active{
+    right: 0;
+    transition: .5s ease-in-out;
+}
+
+/* search box ends  */
+
+/* saved box starts  */
+
+.header .saved-product{
+    position: absolute;
+    top: 100%;
+    right: -120%;
+    background: #fff;
+    width: 40rem;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+.header .saved-product h1{
+    background: #fafafa;
+    border-top: .1rem solid rgba(0,0,0,.5);
+    color: var(--black);
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.header .saved-product .image-Box{
+    padding: 2rem;
+    padding-bottom: 0;
+}
+
+.header .saved-product .image-Box .box,
+.header .saved-product .image-Box .box .image{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .saved-product .image-Box .box{
+    padding: 1rem 0;
+    border-bottom: .1rem solid rgba(0,0,0,.1);
+}
+
+.header .saved-product .image-Box .box .image img{
+    max-width: 6rem;
+}
+
+.header .saved-product .image-Box .box .image .contant{
+    margin-left: .7rem;
+}
+
+.header .saved-product .image-Box .box .image .contant h3{
+    font-size: 1.3rem;
+    color: var(--black);
+    font-weight: 600;
+    padding: .2rem;
+}
+
+.header .saved-product .image-Box .box .image .contant span{
+    font-size: 1.2rem;
+}
+
+.header .saved-product .image-Box .box .image .contant p{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header .saved-product .image-Box .box a i{
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    font-size: 1.7rem;
+    background: #fafafa;
+    border-radius: 50%;
+    color: #000;
+}
+
+.header .saved-product .image-Box .box a i:hover{
+    color: var(--main-color);
+}
+
+.header .saved-product .total{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    border-bottom: .1rem solid rgba(0,0,0,.1);
+}
+
+.header .saved-product .total p{
+    font-size: 1.5rem;
+    color: var(--black);
+    letter-spacing: .1rem;
+}
+
+.header .saved-product .total span{
+    font-size: 2rem;
+    color: #000;
+    font-weight: bold;
+}
+
+.header .saved-product .btn{
+    padding: 1rem 2rem;
+}
+
+.header .saved-product .btn button{
+    width: 100%;
+    margin: .5rem 0;
+    background: #000;
+    opacity: .9;
+    color: #fff;
+    padding: 1.5rem 0;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.header .saved-product .btn button:hover{
+    opacity: 1;
+}
+
+.header .saved-product .btn .btn-1{
+    background: #fff;
+    border: .1rem solid #000;
+    color: #000;
+}
+
+.header .saved-product .btn .btn-1:hover{
+    background: #000;
+    color: #fff;
+}
+
+.header .saved-product.active{
+    right: 0;
+    transition: .5s linear;
+}
+
+/* saved box ends */
+
+
+/* -------------------------------------------- header section ends ---------------------------  */
+
+
+/* --------------------------------------------- home section starts -----------------------------  */
+
+.home{
+    background: url('images/home-2.png');
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.home .box-container{
+    max-width: 50rem;
+}
+
+.home .box-container span{
+    color: var(--main-color);
+    font-size: 1.3rem;
+    font-weight: normal;
+    text-transform: capitalize;
+}
+
+.home .box-container h1{
+    font-size: 5rem;
+    color: #000;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.home .box-container h1 span{
+    color: var(--main-color);
+    font-size: 6rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.home .box-container p{
+    font-size: 1.8rem;
+    color: var(--black);
+    font-style: italic;
+    text-decoration: initial;
+    padding: .5rem 0;
+}
+
+.home .box-container button{
+    background: none;
+    color: var(--black);
+    padding: 1rem 3rem;
+    border: .1rem solid var(--black);
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.home .box-container button:hover{
+    background: #000;
+    color: #fff;
+    transition: .3s linear;
+}
+
+/* --------------------------------------------- home section ends -----------------------------  */
+
+/* --------------------------------------- products section starts-------------------------------  */
+
+.products{
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.products h1{
+    font-size: 3rem;
+    color: #000;
+    font-weight: bold;
+    padding: 3rem 0;
+}
+
+.products .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
+    gap: 1.5rem;
+}
+
+.products .box-container .box{
+    border: .1rem solid rgba(0,0,0,.1);
+    overflow: hidden;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.products .box-container .box .image{
+    position: relative;
+}
+
+.products .box-container .box .image img{
+    width: 100%;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.products .box-container .box .image .icons p{
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    padding: .5rem 1.2rem;
+    background: #1ac790;
+    color: #fff;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+}
+
+.products .box-container .box .image .icons a i{
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    color: #333;
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    background: #fff;
+    border-radius: 50%;
+    font-size: 1.7rem;
+}
+
+.products .box-container .box .image .icons a i:hover{
+    color: var(--main-color);
+}
+
+.products .box-container .box .btn{
+    width: 100%;
+    background: #000;
+    padding: 1.5rem;
+    position: absolute;
+    bottom: -20%;
+}
+
+.products .box-container .box .btn a{
+    color: #fff;
+    font-size: 1.6rem;
+}
+
+.products .box-container .box .btn a i{
+    margin-right: .5rem;
+}
+
+.products .box-container .box:hover .btn{
+    bottom: 17%;
+    transition: .3s linear;
+}
+
+.products .box-container .box .content{
+    padding: 1rem 0;
+}
+
+.products .box-container .box .content h3{
+    font-size: 1.7rem;
+    color: #000;
+    font-weight: 600;
+}
+
+.products .box-container .box .content p{
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #222;
+}
+
+.products .box-container .box .content p span{
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #222;
+    text-decoration: line-through;
+    margin-right: .5rem;
+}
+
+.products button{
+    margin-top: 3rem;
+    padding: 1rem 3rem;
+    background: #fff;
+    color: #000;
+    font-size: 1.8rem;
+    cursor: pointer;
+    border: .1rem solid #000;
+}
+
+.products button i{
+    font-size: 1.6rem;
+    margin-left: .5rem;
+}
+
+.products button:hover{
+    background: var(--main-color);
+    color: #fff;
+    border-color: var(--main-color);
+}
+
+/* --------------------------------------- products section ends-------------------------------  */
+
+/* ----------------------------------------- offer section starts -------------------------------  */
+
+.offer{
+    background: linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)), url('images/smmer-pic.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 8rem;
+    margin-bottom: 5rem;
+    height: 50rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.offer .box-container .box{
+    width: 70rem;
+    text-align: center;
+}
+
+.offer .box-container .box h1{
+    font-size: 4rem;
+    color: #fff;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+
+.offer .box-container .box h1 span{
+    font-size: 4rem;
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.offer .box-container .box p{
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #fff;
+    letter-spacing: .1rem;
+    padding-bottom: 1rem;
+}
+
+.offer .box-container .box button{
+    background: var(--main-color);
+    color: #fff;
+    padding: .8rem 3.5rem;
+    margin-top: 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.offer .box-container .box button i{
+    margin-left: 1rem;
+    font-size: 1.6rem;
+}
+
+.offer .box-container .box button:hover i{
+    padding-left: 2rem;
+}
+
+/* ----------------------------------------- offer section ends -------------------------------  */
+
+/* ------------------------------------------ new update section starts ------------------------  */
+
+.new-update h1{
+    text-align: center;
+    font-size: 3rem;
+    color: #000;
+    font-weight: bold;
+    padding: 3rem 0;
+}
+
+.new-update .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.new-update .box-container .box{
+    overflow: hidden;
+    width: 100%;
+    border-radius: .5rem;
+    margin-bottom: 1.5rem;
+}
+
+.new-update .box-container .box .image img{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.new-update .box-container .box .content span{
+    font-size: 1.3rem;
+    color: var(--black);
+}
+
+.new-update .box-container .box .content h2{
+    font-size: 1.5rem;
+    color: #000;
+    padding: .5rem 0;
+    font-weight: 600;
+}
+
+.new-update .box-container .box .content p{
+    font-size: 1.3rem;
+    color: var(--black);
+    line-height: 1.8;
+    padding-bottom: 1rem;
+}
+
+.new-update .box-container .box .content a{
+    font-size: 1.5rem;
+    color: var(--black);
+    padding: 1rem 0;
+}
+
+.new-update .box-container .box .content a:hover{
+    color: var(--main-color);
+}
+
+/* ------------------------------------------ new update section ends ------------------------  */
+
+/* ----------------------------------------- footer section starts -----------------------------  */
+
+.footer{
+    margin-top: 8rem;
+    background: #fafafa;
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
+    gap: 1.5rem;
+}
+
+.footer .box-container .box{
+    padding: 2rem;
+}
+
+.footer .box-container .box h1{
+    font-size: 1.8rem;
+    color: #000;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.footer .box-container .box p{
+    font-size: 1.3rem;
+    color: #444;
+    line-height: 1.8;
+}
+
+.footer .box-container .box .link a{
+    display: block;
+    margin: .5rem;
+    color: var(--black);
+    font-size: 1.6rem;
+}
+
+.footer .box-container .box .link a:hover{
+    color: var(--main-color);
+    text-decoration: underline;
+}
+
+.footer .box-container .box .icons a i{
+    margin: .5rem;
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    font-size: 1.5rem;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.footer .box-container .box .icons a i:hover{
+    background: var(--main-color);
+    color: #fff;
+}
+
+.footer .credit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    border-top: .1rem solid rgba(0,0,0,.1);
+    padding: 4rem 0;
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.footer .credit span{
+    color: var(--main-color);
+}
+
+/* ----------------------------------------- footer section ends -----------------------------  */
+
+
+
+
+
+
+
+
+
+/* ------------------------- Media queries starts ------------------------  */
+
+@media (max-width: 991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding: 2rem;
+    }
+
+    section{
+        padding: 2rem;
+    }
+
+    .header.active{
+        padding: 2rem;
+    }
+
+}
+
+/* ----------- max-width 768px ----------  */
+
+@media (max-width: 768px){
+
+    .header .icons #menuBtn{
+        display: inline-block;
+    }
+
+    .header .logo .navbar{
+        position: absolute;
+        top: 100%;
+        right: -120%;
+        width: 30rem;
+        background: #fff;
+        border: .1rem solid rgba(0,0,0,.1);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+        height: 100vh;
+    }
+
+    .header .logo .navbar a{
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        border-left: .2rem solid var(--main-color);
+    }
+
+    .header .logo .navbar a:hover{
+        border-left: .5rem solid var(--main-color);
+    }
+
+    .header .logo .navbar.active{
+        right: 0;
+        transition: .5s linear;
+    }
+
+    .home{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .offer .box-container .box{
+        width: 48rem;
+        text-align: center;
+    }
+
+    .offer .box-container .box{
+        width: 48rem;
+    }
+
+    .footer .credit{
+        font-size: 1.5rem;
+    }
+
+}
+
+/* -------------- max-width 450px ---------  */
+
+@media (max-width: 450px){
+
+    html{
+        font-size: 50%;
+    }
+
+    .header{
+        flex-direction: column;
+    }
+
+    .header .logo{
+        padding: 1.5rem 0;
+    }
+
+    .home{
+        background-position: left;
+    }
+
+    .home .box-container h1{
+        font-size: 4rem;
+    }
+
+    .home .box-container h1 span{
+        font-size: 4.5rem;
+    }
+
+    .offer .box-container .box{
+        width: 25rem;
+        text-align: center;
+    }
+
+    .offer .box-container .box{
+        width: 25rem;
+    }
+
+}
